@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Links</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        a {
+            color: red;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        a:visited { /*sites já visitados*/
+            color: darkred;
+        }
+        a:hover { /*quando passa o mouse*/
+            color: black;
+            text-decoration: underline;
+        }
+        a:active { /*quando clica*/
+            color: rgb(110, 110, 82);
+        }
+
+        a::before {
+            content: '⇒ ';
+        }
+
+        a::after {
+            content: ' ⇐';
+        }
+
+        .especial {
+            background-color: antiquewhite;
+        }
+
+        .especial::after {
+            content: ' [especial]';
+        }
+
+        h1::first-letter {
+            font-size: 36px;
+            color: rgb(112, 35, 35);
+        }
+
+        p::first-line {
+            color: blue;
+            text-transform:uppercase;
+        }
+    </style>
+</head>
+<body>
+    <h1>Personalizando links</h1>
+    <ul>
+        <li><a href="https://gustavoguanabara.github.io" target="_blank">Repositório GitHub</a></li>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia, exercitationem? Ex voluptas odit dolores, similique tenetur officia aliquam ut nulla unde temporibus officiis excepturi qui iste repudiandae nam perferendis laboriosam. Lorem ipsum dolor sit amet consectetur adipisicing elit. In libero eveniet accusamus quas consequatur quia, fugit adipisci tempore facilis aliquam harum corporis. Saepe, corrupti officiis beatae odio aspernatur id maiores!</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime reiciendis voluptatem magnam et sed, beatae voluptatum. Quidem commodi, animi recusandae iure cum labore eligendi possimus distinctio inventore id eaque nobis!</p>
+        <li><a href="https://youtube.com/cursoemvideo/" target="_blank" class="especial">Canal do youtube</a></li>
+        <li><a href="https://www.cursoemvideo.com" target="_blank">Site do CursoemVideo</a></li>
+    </ul>
+</body>
+</html>
